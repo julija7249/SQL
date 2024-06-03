@@ -1,6 +1,6 @@
 USE lesson12_task_2;
-CREATE TABLE Студенты (
-    Идентификатор INT IDENTITY(1, 1) PRIMARY KEY,
-    Имя VARCHAR(100),
-    Фамилия VARCHAR(100)
+CREATE TABLE Students (
+    Id INT IDENTITY(1, 1) PRIMARY KEY,
+    FirstName VARCHAR(100),
+    LastName VARCHAR(100)
 );
