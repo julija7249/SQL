@@ -2,9 +2,9 @@ INSERT INTO Students (FirstName, LastName, ExamScore)
 SELECT FirstName, LastName, Score
 FROM (
     VALUES 
-        ('Иван', 'Бунша', 220, 'История'),
-        ('Остап', 'Бендер', 170, 'Право'),
-        ('Александр', 'Тимофеев', 300, 'Физика')
+        ('РРІР°РЅ', 'Р‘СѓРЅС€Р°', 220, 'РСЃС‚РѕСЂРёСЏ'),
+        ('РћСЃС‚Р°Рї', 'Р‘РµРЅРґРµСЂ', 170, 'РџСЂР°РІРѕ'),
+        ('РђР»РµРєСЃР°РЅРґСЂ', 'РўРёРјРѕС„РµРµРІ', 300, 'Р¤РёР·РёРєР°')
 ) AS ExamList (FirstName, LastName, Score, Direction)
 WHERE NOT EXISTS (
     SELECT 1
