@@ -1,3 +1,4 @@
+USE DB_lesson;
 INSERT INTO Students (FirstName, LastName, ExamScore)
 SELECT FirstName, LastName, Score
 FROM (
