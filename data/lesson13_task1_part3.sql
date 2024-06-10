@@ -1,4 +1,5 @@
-USE t17;
+п»ї-- -*- coding: utf-8 -*-
+USE t18;
 IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'ExamList')
 BEGIN
     CREATE TABLE ExamList(
@@ -14,9 +15,9 @@ IF NOT EXISTS (SELECT * FROM ExamList)
 BEGIN
 	INSERT INTO ExamList (FirstName, LastName, ExamScore, Direction)
 	VALUES
-        ('Иван', 'Бунша', 220, 'История'),
-        ('Остап', 'Бендер', 170, 'Право'),
-        ('Александр', 'Тимофеев', 300, 'Физика');
+        ('РРІР°РЅ', 'Р‘СѓРЅС€Р°', 220, 'РСЃС‚РѕСЂРёСЏ'),
+        ('РћСЃС‚Р°Рї', 'Р‘РµРЅРґРµСЂ', 170, 'РџСЂР°РІРѕ'),
+        ('РђР»РµРєСЃР°РЅРґСЂ', 'РўРёРјРѕС„РµРµРІ', 300, 'Р¤РёР·РёРєР°');
 END;
 IF NOT EXISTS (SELECT * FROM Students)
 BEGIN

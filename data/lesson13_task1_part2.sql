@@ -1,3 +1,4 @@
+-- -*- coding: utf-8 -*-
 USE t18;
 IF NOT EXISTS (
     SELECT *
