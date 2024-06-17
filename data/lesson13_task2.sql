@@ -1,5 +1,4 @@
-п»їп»ї-- -*- coding: utf-8 -*-
-USE DB1;
+USE DB_lesson0;
 IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Directions')
 BEGIN
     CREATE TABLE Directions(
@@ -12,8 +11,8 @@ IF NOT EXISTS (SELECT * FROM Directions)
 BEGIN
 	INSERT INTO Directions (CodeDirection, NameDirection, MinMark)
 	VALUES
-        (1, 'РСЃС‚РѕСЂРёСЏ', 160),
-        (2, 'РџСЂР°РІРѕ', 180),
-        (3, 'Р¤РёР·РёРєР°', 200);
+        (1, 'История', 160),
+        (2, 'Право', 180),
+        (3, 'Физика', 200);
 END;
 SELECT * FROM Directions;
