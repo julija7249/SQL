@@ -1,4 +1,4 @@
-USE DB_lesson0;
+USE DB_lesson;
 IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'ExamList')
 BEGIN
     CREATE TABLE ExamList(
@@ -6,17 +6,16 @@ BEGIN
 		FirstName VARCHAR(100),
 		LastName VARCHAR(100),
 		ExamScore INT,
-		Direction VARCHAR(100),
-		FOREIGN KEY (StudentNumber)  REFERENCES Students (Id)
+		Direction VARCHAR(100)
 	);
 END;
 IF NOT EXISTS (SELECT * FROM ExamList)
 BEGIN
-	INSERT INTO ExamList (FirstName, LastName, ExamScore, Direction)
+	INSERT INTO ExamList (StudentNumber, FirstName, LastName, ExamScore, Direction)
 	VALUES
-        ('Иван', 'Бунша', 220, 'История'),
-        ('Остап', 'Бендер', 170, 'Право'),
-        ('Александр', 'Тимофеев', 300, 'Физика');
+        (1, 'Иван', 'Бунша', 220, 'История'),
+        (2, 'Остап', 'Бендер', 170, 'Право'),
+        (3, 'Александр', 'Тимофеев', 300, 'Физика');
 END;
 IF NOT EXISTS (SELECT * FROM Students)
 BEGIN
@@ -25,3 +24,4 @@ BEGIN
 	FROM ExamList;
 END;
 SELECT * FROM Students;
+SELECT * FROM ExamList;
