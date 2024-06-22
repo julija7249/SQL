@@ -1,4 +1,3 @@
--- -*- coding: utf-8 -*-
 USE DB_lesson;
 IF NOT EXISTS (
     SELECT *

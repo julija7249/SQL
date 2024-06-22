@@ -1,4 +1,3 @@
--- -*- coding: utf-8 -*-
 USE DB_lesson;
 IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'ExamList')
 BEGIN
@@ -14,9 +13,9 @@ IF NOT EXISTS (SELECT * FROM ExamList)
 BEGIN
 	INSERT INTO ExamList (StudentNumber, FirstName, LastName, ExamScore, Direction)
 	VALUES
-        (1, 'Иван', 'Бунша', 220, 'История'),
-        (2, 'Остап', 'Бендер', 170, 'Право'),
-        (3, 'Александр', 'Тимофеев', 300, 'Физика');
+        (1, 'РРІР°РЅ', 'Р‘СѓРЅС€Р°', 220, 'РСЃС‚РѕСЂРёСЏ'),
+        (2, 'РћСЃС‚Р°Рї', 'Р‘РµРЅРґРµСЂ', 170, 'РџСЂР°РІРѕ'),
+        (3, 'РђР»РµРєСЃР°РЅРґСЂ', 'РўРёРјРѕС„РµРµРІ', 300, 'Р¤РёР·РёРєР°');
 END;
 IF NOT EXISTS (SELECT * FROM Students)
 BEGIN
