@@ -1,3 +1,4 @@
+-- -*- coding: utf-8 -*-
 USE DB_lesson;
 UPDATE Students
 SET Students.CodeDirection = Directions.CodeDirection
