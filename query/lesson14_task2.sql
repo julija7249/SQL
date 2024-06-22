@@ -1,3 +1,4 @@
+-- -*- coding: utf-8 -*-
 USE DB_lesson;
 SELECT STUFF(
     (SELECT ', ' + LastName
