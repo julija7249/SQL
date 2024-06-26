@@ -8,8 +8,10 @@ ON Students
 AFTER INSERT
 AS
 BEGIN
-    UPDATE Directions
-    SET RecruitmentIsOver = CASE
+	IF EXISTS (SELECT 1 FROM Students)
+    BEGIN
+		UPDATE Directions
+		SET RecruitmentIsOver = CASE
                         WHEN EXISTS (
                             SELECT 1
                             FROM Students
@@ -19,4 +21,7 @@ BEGIN
                         ) THEN 1
                         ELSE 0
                     END
+		FROM Directions JOIN Students ON Directions.CodeDirection = Students.CodeDirection AND Students.ExamScore >= Directions.MinMark;
+	END;
 END;
+GO
